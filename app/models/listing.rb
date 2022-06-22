@@ -1,5 +1,7 @@
 class Listing < ApplicationRecord
   belongs_to :user
   belongs_to :category
-  belongs_to :comment
+  has_many :comments
+
+  
 end
