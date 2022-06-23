@@ -8,7 +8,6 @@ class Listing < ApplicationRecord
     not_much_damege: 2,
     a_little_damage: 3,
     much_damage: 4,
-    overall_bad_condition: 5
   }
 
 end

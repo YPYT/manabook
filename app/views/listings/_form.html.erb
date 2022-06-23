@@ -11,24 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :list_image %>
+    <div class="field">
+    <%= form.label :image  %>
     <%= form.text_field :list_image %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, min: 5%>
+    <%= form.label :Name %>
+    <%= form.text_field :title %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.select :category_id, @categories.map {|c| [c.name, c.id]} %>
   </div>
 
   <div class="field">
@@ -39,8 +39,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :category_id %>
-    <%= form.select :category_id, @categories.map {|c| [c.name, c.id]} %>
+    <%= form.label :price %>
+    <%= form.number_field :price, min: 5%>
   </div>
 
   <div class="actions">
