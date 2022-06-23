@@ -23,6 +23,7 @@ class ListingsController < ApplicationController
   # POST /listings or /listings.json
   def create
     @listing = Listing.new(listing_params)
+    @listing.user = current_user
 
     respond_to do |format|
       if @listing.save
@@ -69,10 +70,11 @@ class ListingsController < ApplicationController
     def set_form_vars
       @categories = Category.all
       @conditions = Listing.conditions.keys
+
     end
 
     # Only allow a list of trusted parameters through.
     def listing_params
-      params.require(:listing).permit(:title, :list_image, :price, :description, :condition, :sold, :user_id, :category_id, :comment_id)
+      params.require(:listing).permit(:title, :list_image, :price, :description, :condition, :sold, :user_id, :category_id)
     end
 end

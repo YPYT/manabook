@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-grades = ["Year 1 to 6", "Year 7 to 10", "Year 11, 12", "TAFE", "University"]
+categories = [ "Year 1 to 6", "Year 7 to 10", "Year 11, 12", "TAFE", "University" ]
 
 if Category.count == 0
-    grades.each do |grade|
-        Category.create(name: grade)
-        puts "created #{grade} category"
+    categories.each do |category|
+        Category.create(name: category)
+        puts "created #{category} category"
     end
 end
 

@@ -13,7 +13,6 @@
       <th>Sold</th>
       <th>User</th>
       <th>Category</th>
-      <th>Comment</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,7 +28,6 @@
         <td><%= listing.sold %></td>
         <td><%= listing.user_id %></td>
         <td><%= listing.category_id %></td>
-        <td><%= listing.comment_id %></td>
         <td><%= link_to 'Show', listing %></td>
         <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
         <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
