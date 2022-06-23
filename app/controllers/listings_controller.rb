@@ -34,6 +34,8 @@ class ListingsController < ApplicationController
     end
   end
 
+
+
   # PATCH/PUT /listings/1 or /listings/1.json
   def update
     respond_to do |format|
