@@ -7,7 +7,9 @@
 
 <p>
   <strong>List image:</strong>
-  <%= @listing.list_image %>
+  <% @listing.list_images.each do |image|  %>
+    <%= image_tag url_for(image) %>
+  <% end %>
 </p>
 
 <p>
