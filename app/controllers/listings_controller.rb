@@ -78,7 +78,7 @@ class ListingsController < ApplicationController
 
     def authorize_user
       if current_user.id != @listing.user.id
-        flash[:alert] = "You are not allowed to do that."
+        flash[:alert] = "Not allowed to do that."
         redirect_to listings_path
       end
     end
