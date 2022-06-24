@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/show'
+  get 'users/edit'
   resources :listings
   root 'pages#home'
   devise_for :users
