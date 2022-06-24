@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # add devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # save files in Amazon S3
+  config.active_storage.service = :amazon
 end
