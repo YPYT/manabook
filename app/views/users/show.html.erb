@@ -1,6 +1,6 @@
 <p>
   <strong>User Name:</strong>
-  <%# <%= @user.name %> %>
+  <%= @user.name %>
 
-  <%# <%= image_tag url_for(@user.avatar) %> %>
+  <%= image_tag @user.profile_image, alt: @user.name %>
 </p>
