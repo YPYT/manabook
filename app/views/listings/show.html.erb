@@ -8,7 +8,7 @@
 <p>
   <strong>List image:</strong>
   <% @listing.list_images.each do |image|  %>
-    <%= image_tag image.variant(resize_to_limit: [300,300]) %>
+    <%= image_tag image.variant(resize_to_limit: [300,300]), alt: @listing.title %>
   <% end %>
 </p>
 
