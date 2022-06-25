@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/show'
-  get 'users/edit'
+  # get 'users/:id', to:"users#show", as: "users_show"
+  # get 'users/:id/edit', to:"users#edit", as: "users_edit"
+  resources :users
+
   resources :listings
   root 'pages#home'
   devise_for :users
