@@ -36,7 +36,7 @@
   <%= link_to @listing.user.username, user_path(@listing.user) %>
 </p>
 
-<% if current_user.id == @listing.user.id %>
+<% if current_user && current_user.id == @listing.user.id %>
   <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <% end %>
 
