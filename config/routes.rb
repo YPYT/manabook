@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   # get 'users/:id/edit', to:"users#edit", as: "users_edit"
 
 
-  resources :listings
+  resources :listings do
+    resources :comments
+  end
   root 'pages#home'
   devise_for :users
   resources :users
