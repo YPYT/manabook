@@ -32,6 +32,8 @@
   <%= @listing.category_id %>
 </p>
 
+<p><%= time_ago_in_words(@listing.updated_at) %>ago</p>
+
 <p>
   <%= link_to @listing.user.username, user_path(@listing.user) %>
 </p>
