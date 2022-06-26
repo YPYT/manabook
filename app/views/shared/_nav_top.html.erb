@@ -1,5 +1,8 @@
 <%= link_to "📘ManaBook", root_path %>
 <%= link_to "Listing", listings_path %>
+<% if user_signed_in? %>
+<%= link_to "My page", user_path(current_user) %>
+<% end %>
 
 <span style="float: right">
 <% if user_signed_in? %>

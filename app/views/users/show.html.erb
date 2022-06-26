@@ -9,6 +9,10 @@
 <% end %>
 
 
+<%= @user.profile  %>
 
+<% if current_user.id == @user.id %>
+  <%= link_to 'Edit Profile', edit_user_path(@user) %> 
+<% end %>
 
 
