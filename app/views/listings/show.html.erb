@@ -17,6 +17,17 @@
   <%= @listing.price %>
 </p>
 
+<% if @listing.sold %>
+  <h3>SOLD OUT</h3>
+<% elsif current_user && current_user.id == @listing.user.id %>
+  <p> </p>
+<% elsif current_user %>
+  <%= button_to "Buy this item!", place_order_path %>
+<% else %>
+  <%= link_to "Log In to buy this item", new_user_session_path %>
+<% end %>
+
+
 <p>
   <strong>Description:</strong>
   <%= @listing.description %>
