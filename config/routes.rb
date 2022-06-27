@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 
   resources :listings do
-    resources :comments
+    resources :comments, only: [:create, :destroy]
   end
   root 'pages#home'
   devise_for :users

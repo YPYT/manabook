@@ -40,11 +40,11 @@
 
 <h2><%= pluralize(@listing.comments.count, 'Comment') %></h2>
 <% @listing.comments.each do |c|  %>
-<%= c.user.username  %>
-<%= c.comment  %>
-<% if c.listing.user.id == current_user.id %>
-<p>削除ボタン</p>
-<% end %>
+  <%= c.user.username  %>
+  <%= c.comment  %>
+  <% if current_user && c.listing.user.id == current_user.id %>
+    <%= link_to "Delete this comment", listing_comment_path(@listing, c), data: { confirm: 'Are you sure?' }, method: :delete %>
+  <% end %>
 <% end %>
 
 
@@ -52,11 +52,11 @@
 <h2>Add a Comment</h2>
   <%= form_with model: [@listing, @listing.comments.build] do |form| %>
     <div>
-      <%= form.text_area :comment %>
+      <%= form.text_area :comment, placeholder: "Write a comment" %>
     </div>
 
     <div>
-      <%= form.submit %>
+      <%= form.submit "SEND" %>
     </div>
   <% end %>
 <% else %>
