@@ -19,7 +19,6 @@ class CommentsController < ApplicationController
         else
           flash[:alert] = 'Failed to delete the comment'
           render listing_path(@listing)
-        #   redirect_back(fallback_location: root_path)
         end
     end
 
