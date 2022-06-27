@@ -3,13 +3,20 @@ Rails.application.routes.draw do
   # get 'users/:id/edit', to:"users#edit", as: "users_edit"
 
 
-  resources :listings do
-    resources :comments, only: [:create, :destroy]
-  end
+
   root 'pages#home'
   devise_for :users
   resources :users
-  post 'listings/:id/order', to: "listings#place_order", as: "place_order"
+  resources :listings do
+    resources :comments, only: [:create, :destroy]
+  end
+  resources :listings do
+    post 'order/success', to: "orders#listing_order"
+    get 'order/success', to: 'orders#show'
+    post 'order/confirm', to: 'orders#confirm'
+    get 'order/confirm', to: 'orders#confirm'
+  end
+
 
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

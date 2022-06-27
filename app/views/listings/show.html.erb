@@ -22,7 +22,7 @@
 <% elsif current_user && current_user.id == @listing.user.id %>
   <p> </p>
 <% elsif current_user %>
-  <%= button_to "Buy this item!", place_order_path %>
+  <%= button_to "Buy this item!", listing_order_confirm_path(@listing) %>
 <% else %>
   <%= link_to "Log In to buy this item", new_user_session_path %>
 <% end %>

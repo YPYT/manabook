@@ -67,16 +67,6 @@ class ListingsController < ApplicationController
     end
   end
 
-  def place_order
-    Order.create(
-      listing_id: @listing.id,
-      seller_id: @listing.user_id,
-      buyer_id: current_user.id
-    )
-
-    @listing.update(sold: true)
-    # redirect_to order_success_path
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
