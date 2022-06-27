@@ -1,10 +1,29 @@
 <h2>注文確認画面</h2>
-  <%= @listing.title %>
-  <% @listing.list_images.each do |image|  %>
-    <%= image_tag image.variant(resize_to_limit: [300,300]), alt: @listing.title %>
-  <% end %>
-  <%= @listing.price %>
 
+
+<% @listing.list_images.each do |image|  %>
+  <%= image_tag image.variant(resize_to_limit: [150,150]), alt: @listing.title %>
+<% end %>
+
+<table >
+  <tr>
+    <th>Title</th><td><%= @listing.title %></td>
+  </tr>
+  <tr>
+    <th>Price</th><td>$ <%= @listing.price %></td>
+  </tr>
+  <tr>
+    <th>Category</th><td><%= @listing.category.name %></td>
+  </tr>
+  <tr>
+    <th>Item Condition</th><td><%= format_condition(@listing.condition) %></td>
+  </tr>
+  <tr>
+    <th>Seller</th><td><%= @listing.user.username %></td>
+  </tr>
+</table>
+<br><br>
 
 <%= button_to "Continue", listing_order_success_path %>
+<br>
 <%= link_to "Cancel", listing_path(@listing) %>

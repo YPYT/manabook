@@ -1,10 +1,6 @@
-<h2>Your order has been processed</h2>
-Thank you <%= current_user.username  %>
+<h2>Your order has been processed!</h2>
+<p>Thank you <%= current_user.username %> !!</p>
 
-
-<h3>Your Order information</h3>
-  <p>Title: <%= @listing.title %></p>
-  <p>Price: $ <%= @listing.price %></p>
-  <p>Seller: <%= @listing.user.username  %></p>
+  
   
 <%= link_to 'Back', listing_path(@listing)  %>
