@@ -38,6 +38,32 @@
   <%= link_to @listing.user.username, user_path(@listing.user) %>
 </p>
 
+<h2><%= pluralize(@listing.comments.count, 'Comment') %></h2>
+<% @listing.comments.each do |c|  %>
+<%= c.user.username  %>
+<%= c.comment  %>
+<% if c.listing.user.id == current_user.id %>
+<p>削除ボタン</p>
+<% end %>
+<% end %>
+
+
+<% if user_signed_in? %>
+<h2>Add a Comment</h2>
+  <%= form_with model: [@listing, @listing.comments.build] do |form| %>
+    <div>
+      <%= form.text_area :comment %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+<% else %>
+  <h2>Add a Comment</h2>
+  <%= link_to "Log In to Comment", new_user_session_path %>
+<% end %>
+
 <% if current_user && current_user.id == @listing.user.id %>
   <%= link_to 'Edit', edit_listing_path(@listing) %> |
   <%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' } %> |
