@@ -14,12 +14,3 @@ if Category.count == 0
         puts "created #{category} category"
     end
 end
-
-# subjects = ["English", "Second Languages", "Science", "Mathematics", "Technology", "The Arts", "Humanities", "Business Studies", "Health and Physical Education", "Accounting", "Aged Care", "Beauty", "Child Care", "Community Services", "Building & Constraction", "Business & Commerce", "Education & Teaching", "Arts", "Health", "IT", "Hospitality", "Sports", "Nursing","Criminology", "Engineering", "Music", "Medicine", "Law", "Others"]
-
-# if Category.count == 0
-#     subjects.each do |subject|
-#         Category.create(name: subject)
-#         puts "created #{subject} category"
-#     end
-# end

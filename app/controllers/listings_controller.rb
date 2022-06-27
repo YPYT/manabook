@@ -10,11 +10,8 @@ class ListingsController < ApplicationController
   end
 
   # GET /listings/1 or /listings/1.json
-  def show
-    # @listing = Listing.find(params[:id])
-
-    # @comment = Comment.new    
-    # @comments = @listing.comments
+  def show 
+    
   end
 
   # GET /listings/new

@@ -1,20 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Title:
   <%= @listing.title %>
+  </strong>
 </p>
 
 <p>
-  <strong>List image:</strong>
+  <strong>Image:</strong>
   <% @listing.list_images.each do |image|  %>
     <%= image_tag image.variant(resize_to_limit: [300,300]), alt: @listing.title %>
   <% end %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @listing.price %>
+  <strong>Price: $ 
+  <%= @listing.price %> </strong>
 </p>
 
 <% if @listing.sold %>
@@ -40,7 +41,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @listing.category_id %>
+  <%= @listing.category.name %>
 </p>
 
 <p><%= time_ago_in_words(@listing.updated_at) %>ago</p>
