@@ -47,6 +47,7 @@
 <p><%= time_ago_in_words(@listing.updated_at) %>ago</p>
 
 <p>
+  <strong>Seller:</strong>
   <%= link_to @listing.user.username, user_path(@listing.user) %>
 </p>
 
