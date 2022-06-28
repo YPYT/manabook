@@ -1,34 +1,52 @@
-<p id="notice"><%= notice %></p>
+<%# <p id="notice"> %>
+<%#= notice %>
+<%# </p> %>
 
-<h1>Listings</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>List image</th>
-      <th>Title</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Listings
+      </h1>
+    </div>
+  </div>
+</section>
 
-  <tbody>
-    <% @listings.each do |listing| %>
-      <tr>
-      <% if listing.list_images.attached? %>
-        <td>
-        <%= link_to (image_tag listing.list_images[0].variant(resize_to_limit: [100,100])), listing %>
-        </td>
-      <% else %>
-        <td><%= link_to (image_tag "no-image.png"), listing %></td>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <% @listings.each do |listing| %>
+        <div class="column is-3">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <% if listing.list_images.attached? %>
+                  <%= link_to (image_tag listing.list_images[0]), listing %>
+                <% else %>
+                  <%= link_to (image_tag "no-image.png"), listing %>
+                <% end %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left title is-5">
+                  $ <%= listing.price %>
+                </div>
+                <div class="media-content">
+                  <div class="subtitle">
+                    <%= listing.title %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       <% end %>
-        <td><%= listing.title %></td>
-        <td>$ <%= listing.price %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+    </div>
+  </div>
+</section>
 
 <%= link_to 'New Listing', new_listing_path %>
