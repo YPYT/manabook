@@ -8,9 +8,14 @@
 
 <p>
   <strong>Image:</strong>
-  <% @listing.list_images.each do |image|  %>
-    <%= image_tag image.variant(resize_to_limit: [300,300]), alt: @listing.title %>
+  <% if @listing.list_images.attached? %>
+    <% @listing.list_images.each do |image|  %>
+      <%= image_tag image.variant(resize_to_limit: [300,300]), alt: @listing.title %>
+    <% end %>
+  <% else %>
+    <%= image_tag "no-image.png", alt: @listing.title %>
   <% end %>
+
 </p>
 
 <p>
