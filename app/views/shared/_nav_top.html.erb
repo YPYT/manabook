@@ -1,14 +1,54 @@
-<%= link_to "📘ManaBook", root_path %>
-<%= link_to "Listing", listings_path %>
-<% if user_signed_in? %>
-<%= link_to "My page", user_path(current_user) %>
-<% end %>
+<nav class="navbar is-warning">
+  <div class="navbar-brand">
+    <%= link_to root_path, class: "navbar-item" do %>
+    <h1 class="title is-4" style="font-family: cursive;">📘ManaBook</h1>
+    <% end %>
+    <div class="navbar-burger burger" data-target="navbarBurger">
+      <span></span>
+      <span></span>
+      <span></span>
+     </div>
+  </div>
 
-<span style="float: right">
 <% if user_signed_in? %>
-    <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+  <div id="navbarBurger" class="navbar-menu">
+    <div class="navbar-item">
+      <%= link_to "Products", listings_path, class: "navbar-item button is-warning is-light" %>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <%= link_to "My page", user_path(current_user), class: " button is-warning is-light" %>
+          </p>
+          <p class="control">
+            <%= link_to "Post", new_listing_path, class: "navbar-item button is-warning is-light" %>
+          </p>
+          <p class="control">
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "navbar-item button is-warning is-light" %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 <% else %>
-    <%= link_to "Log In", new_user_session_path %>
-    <%= link_to "Sign Up", new_user_registration_path %>
+  <div id="navbarBurger" class="navbar-menu">
+    <div class="navbar-item">
+      <%= link_to "Products", listings_path, class: "navbar-item button is-warning is-light" %>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <%= link_to "Log In", new_user_session_path, class: "button is-warning is-light" %>
+          </p>
+          <p class="control">
+            <%= link_to "Sign Up", new_user_registration_path, class: "button is-warning is-light" %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>
-</span>
+</nav>
