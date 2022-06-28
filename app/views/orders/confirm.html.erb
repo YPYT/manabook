@@ -1,4 +1,4 @@
-<h2>注文確認画面</h2>
+<h2>Order confirmation</h2>
 
 
 <% @listing.list_images.each do |image|  %>
@@ -24,6 +24,6 @@
 </table>
 <br><br>
 
-<%= button_to "Continue", listing_order_success_path %>
+<%= button_to "Purchase Now", listing_order_success_path %>
 <br>
 <%= link_to "Cancel", listing_path(@listing) %>

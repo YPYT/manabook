@@ -6,7 +6,7 @@ class ListingsController < ApplicationController
 
   # GET /listings or /listings.json
   def index
-    @listings = Listing.all
+    @listings = Listing.with_attached_list_images
   end
 
   # GET /listings/1 or /listings/1.json

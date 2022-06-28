@@ -3,7 +3,7 @@ class Listing < ApplicationRecord
   belongs_to :category
   has_many :comments, dependent: :destroy
   has_many_attached :list_images
-
+  
 
   enum condition: {
     new_or_unused: 1,
