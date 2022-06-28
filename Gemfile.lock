@@ -239,7 +239,7 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk-s3
   bootsnap (>= 1.4.4)
-  bulma-rails
+  bulma-rails (~> 0.9.3)
   byebug
   devise (~> 4.8)
   factory_bot_rails

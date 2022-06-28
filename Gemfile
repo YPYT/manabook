@@ -53,5 +53,5 @@ gem "devise", "~> 4.8"
 
 gem "aws-sdk-s3", require: false
 
-gem "bulma-rails"
+gem "bulma-rails", "~> 0.9.3"
 
