@@ -70,11 +70,11 @@ ActiveRecord::Schema.define(version: 2022_06_27_031257) do
   end
 
   create_table "listings", force: :cascade do |t|
-    t.string "title"
-    t.string "list_image"
-    t.integer "price"
-    t.text "description"
-    t.integer "condition"
+    t.string "title", null: false
+    t.string "list_images"
+    t.integer "price", null: false
+    t.text "description", null: false
+    t.integer "condition", null: false
     t.boolean "sold", default: false
     t.bigint "user_id", null: false
     t.bigint "category_id", null: false

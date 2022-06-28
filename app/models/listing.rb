@@ -2,7 +2,14 @@ class Listing < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_many :comments, dependent: :destroy
-  has_many_attached :list_images
+  has_many_attached :list_images, dependent: :destroy
+  
+  with_options presence: true do
+    validates :title
+    validates :price
+    validates :description
+    validates :condition
+  end
 
 
 

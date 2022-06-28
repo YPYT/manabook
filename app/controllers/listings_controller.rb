@@ -21,6 +21,9 @@ class ListingsController < ApplicationController
 
   # GET /listings/1/edit
   def edit
+    if @listing.user != current_user
+      redirect_to listings_path, alert: "Unauthorized access."
+    end
   end
 
   # POST /listings or /listings.json

@@ -7,7 +7,7 @@ class User < ApplicationRecord
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
   validates :password, format: { with: VALID_PASSWORD_REGEX, message: "must contain both single-byte alphanumeric characters"}
 
-  has_many :listings
+  has_many :listings, dependent: :destroy
   has_many :comments, dependent: :destroy
   
   has_many :sold_orders, foreign_key: "seller_id", class_name: "Order"

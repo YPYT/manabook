@@ -2,7 +2,6 @@
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this listing from being saved:</h2>
-
       <ul>
         <% user.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,33 +10,39 @@
     </div>
   <% end %>
 
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-6">
 
-  <div class="field">
-    <%= form.label :image  %>
-    <%= form.file_field :profile_image, accept: "image/png,image/jpg,image/jpeg" %>
-  </div>
+          <div class="field">
+            <%= form.label :image, class: "label"  %>
+            <%= form.file_field :profile_image, accept: "image/png,image/jpg,image/jpeg", class: "input" %>
+          </div>
 
+          <div class="field">
+            <%= form.label :username, class: "label" %>
+            <%= form.text_field :username, class: "input" %>
+          </div>
 
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
-  </div>
+          <div class="field">
+            <%= form.label :email, class: "label" %>
+            <%= form.email_field :email, class: "input" %>
+          </div>
 
-   <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
+          <div class="field">
+            <%= form.label :profile, class: "label" %>
+            <%= form.text_area :profile, class: "textarea" %>
+          </div>
 
-  <div class="field">
-    <%= form.label :profile %>
-    <%= form.text_area :profile %>
-  </div>
-
-
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+          <div class="actions">
+            <%= form.submit "Update", class: "button is-success" %>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
 <% end %>
 
 
