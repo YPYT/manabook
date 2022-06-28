@@ -1,18 +1,44 @@
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="columns is-centered">
+          <div class="column is-4">
+            <figure class="image is-128x128"  style="margin-left: auto; margin-right: auto;">
+              <% if @user.profile_image.attached? %>
+                <%= image_tag @user.profile_image, alt: @user.username, class: "profile_image is-rounded" %>
+              <% else %>
+                <%= image_tag "placeholder_user.png", alt: @user.username, class: "profile_image is-rounded" %>
+              <% end %>
+            </figure>
+          </div>
+          <div class="column is-8">
+            <table class="table is-fullwidth">
+              <tr>
+                <td class="is-size-4">
+                  <strong><%= @user.username %></strong>
+                </td>
+                <td>
+                  <% if current_user && current_user.id == @user.id %>
+                    <%= link_to 'Edit Profile', edit_user_path(@user), class: "button is-primary" %> 
+                  <% end %>
+                </td>
+              </tr>
+            </table>
+            <table class="table is-fullwidth">
+              <tr>
+                <td>
+                  <%= @user.profile %>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<strong>User Name:</strong>
-  <%= @user.username %>
 
-<% if @user.profile_image.attached? %>
-  <%= image_tag @user.profile_image, alt: @user.username %>
-<% else %>
-  <%= image_tag "placeholder_user.png", alt: @user.username %>
-<% end %>
-
-
-<%= @user.profile  %>
-
-<% if current_user && current_user.id == @user.id %>
-  <%= link_to 'Edit Profile', edit_user_path(@user) %> 
-<% end %>
 
 
