@@ -3,11 +3,9 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!  
 
   def show
-    
   end
 
   def confirm
-   
   end
 
   def listing_order
