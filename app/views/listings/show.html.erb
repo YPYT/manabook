@@ -1,92 +1,121 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p> 
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <figure class="image is-1by1">
+          <% if @listing.list_images.attached? %>
+            <% @listing.list_images.each do |image|  %>
+              <%= image_tag image, alt: @listing.title %>
+            <% end %>
+          <% else %>
+            <%= image_tag "no-image.png", alt: @listing.title %>
+          <% end %>
+        </figure>
+      </div>
 
-<p>
-  <strong>Title:
-  <%= @listing.title %>
-  </strong>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <% if @listing.list_images.attached? %>
-    <% @listing.list_images.each do |image|  %>
-      <%= image_tag image.variant(resize_to_limit: [300,300]), alt: @listing.title %>
-    <% end %>
-  <% else %>
-    <%= image_tag "no-image.png", alt: @listing.title %>
-  <% end %>
-
-</p>
-
-<p>
-  <strong>Price: $ 
-  <%= @listing.price %> </strong>
-</p>
-
-<% if @listing.sold %>
-  <h3>SOLD OUT</h3>
-<% elsif current_user && current_user.id == @listing.user.id %>
-  <p> </p>
-<% elsif current_user %>
-  <%= button_to "Buy this item!", listing_order_confirm_path(@listing) %>
-<% else %>
-  <%= link_to "Log In to buy this item", new_user_session_path %>
-<% end %>
-
-
-<p>
-  <strong>Description:</strong>
-  <%= @listing.description %>
-</p>
-
-<p>
-  <strong>Condition:</strong>
-  <%= format_condition(@listing.condition) %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @listing.category.name %>
-</p>
-
-<p><%= time_ago_in_words(@listing.updated_at) %>ago</p>
-
-<p>
-  <strong>Seller:</strong>
-  <%= link_to @listing.user.username, user_path(@listing.user) %>
-</p>
-
-<h2><%= pluralize(@listing.comments.count, 'Comment') %></h2>
-
-<% @listing.comments.each do |c|  %>
-  <%= c.user.username  %>
-  <%= c.comment  %>
-  <% if current_user && c.listing.user.id == current_user.id %>
-    <%= link_to "Delete this comment", listing_comment_path(@listing, c), data: { confirm: 'Are you sure?' }, method: :delete %>
-  <% end %>
-<% end %>
-
-
-
-<% if user_signed_in? %>
-<h2>Add a Comment</h2>
-  <%= form_with model: [@listing, @listing.comments.build] do |form| %>
-    <div>
-      <%= form.text_area :comment, placeholder: "Write a comment" %>
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <title class = "card-header-title title is-5"><%= @listing.title %></title>
+          </div>
+          <div class="card-content">
+            <p class= "subtitle">
+              $AU <%= @listing.price %>
+            </p>
+            <div class="content">
+              <% if @listing.sold %>
+                <p class="title is-5">SOLD OUT</p>
+              <% elsif current_user && current_user.id == @listing.user.id %>
+                <p> </p>
+              <% elsif current_user %>
+                <%= button_to "Buy this item!", listing_order_confirm_path(@listing), class: "button" %>
+              <% else %>
+                <%= link_to "Log In to buy this item", new_user_session_path, class: "button" %>
+              <% end %>
+            </div>
+            <div class="content">
+              <p class = "title is-5">
+                Item Description
+              </p>
+              <p><%= @listing.description %></p>
+              <p><%= time_ago_in_words(@listing.updated_at) %> ago</p>
+              <p class = "title is-5">
+                Item Information
+              </p>
+              <div class="content">
+                <p class = "title is-6">Condition</p>
+                <p><%= format_condition(@listing.condition) %></p>
+              </div>
+              <div class="content">
+                <p class = "title is-6">Category</p>
+                <p><%= @listing.category.name %></p>
+              </div>
+              <% if current_user && current_user.id == @listing.user.id %>
+                <%= link_to 'Edit', edit_listing_path(@listing), class: "tag is-small" %> |
+                <%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "tag is-small" %> 
+              <% end %>
+            </div>
+            <div class="content">
+              <p class = "title is-5" >Seller</p>
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-32x32">
+                    <% if @listing.user.profile_image.attached? %>
+                      <%= image_tag @listing.user.profile_image, alt: @listing.user.username, class: "profile_image is-rounded" %>
+                    <% else %>
+                      <%= image_tag "placeholder_user.png", class: "profile_image is-rounded" %>
+                    <% end %>
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div class="title is-5"><%= link_to @listing.user.username, user_path(@listing.user) %></div>
+                </div>
+              </div> 
+            </div>
+            <div class="content">
+              <p class = "title is-5"><%= pluralize(@listing.comments.count, 'Comment') %></p>
+                <% @listing.comments.each do |c|  %>
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-32x32">
+                        <% if c.user.profile_image.attached? %>
+                          <%= image_tag c.user.profile_image, alt: c.user.username, class: "profile_image is-rounded" %>
+                        <% else %>
+                          <%= image_tag "placeholder_user.png", alt: c.user.username, class: "profile_image is-rounded" %>
+                        <% end %>
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <div class="title is-5"><%= c.user.username  %></div>
+                      <p><%= c.comment %></p>
+                      <p><%= time_ago_in_words(c.updated_at) %> ago</p>
+                      <% if current_user && c.listing.user.id == current_user.id %>
+                        <%= link_to "Delete", listing_comment_path(@listing, c), data: { confirm: 'Are you sure?' }, method: :delete, class: "tag is-small" %>
+                      <% end %>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+              <% if !user_signed_in? %> 
+                <%= link_to "Log In to Comment", new_user_session_path, class: "button" %>
+              <% elsif @listing.sold %>
+                <p>※ Can't comment because it's sold out.</p>
+              <% else %>
+                <div class="title is-5">Comment</div>
+                <%= form_with model: [@listing, @listing.comments.build] do |form| %>
+                  <div class = "field" >
+                    <%= form.text_area :comment, placeholder: "Write a comment", class: "textarea" %>
+                  </div>
+                  <div class="actions">
+                    <%= form.submit "SEND", class: "button is-success" %>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div>
-      <%= form.submit "SEND" %>
-    </div>
-  <% end %>
-<% else %>
-  <h2>Add a Comment</h2>
-  <%= link_to "Log In to Comment", new_user_session_path %>
-<% end %>
-
-<% if current_user && current_user.id == @listing.user.id %>
-  <%= link_to 'Edit', edit_listing_path(@listing) %> |
-  <%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<% end %>
-
-<%= link_to 'Back', listings_path %>
+  </div>
+</section>
