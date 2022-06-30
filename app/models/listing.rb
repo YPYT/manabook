@@ -17,7 +17,7 @@ class Listing < ApplicationRecord
   }
 
   
-  FILE_NUMBER_LIMIT = 3
+  FILE_NUMBER_LIMIT = 4
 
   validate :validate_number_of_files
 
