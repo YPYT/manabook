@@ -1,6 +1,23 @@
-<h2>Your order has been processed!</h2>
-<p>Thank you <%= current_user.username %> !!</p>
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Your order has been processed!
+      </h1>
+      <p class="subtitle">
+        Thank you <%= current_user.username %>
+      </p>
+    </div>
+  </div>
+</section>
 
-  
-  
-<%= link_to 'Back', listing_path(@listing)  %>
+
+<section class="section">
+  <div class="container">
+    <div class="field">
+      <p class="control">
+        <%= link_to 'Item Page', listing_path(@listing), class: "button is-inf"  %>
+      </p>
+    </div>
+  </div>
+</section>
