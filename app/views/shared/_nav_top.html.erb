@@ -45,11 +45,18 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <span class="icon is-small">
-            <i class="far fa-user"></i>
-            </span>
-            <%= link_to "Log In", new_user_session_path, class: "button is-ghost" %>|
-            <%= link_to "Sign Up", new_user_registration_path, class: "button is-ghost" %>
+            <div class = "button is-ghost">
+              <span class="icon is-small">
+                <i class="far fa-user"></i>
+              </span>
+              <%= link_to "Sign Up", new_user_registration_path %>
+            </div>
+            <div class = "button is-light"> 
+              <span class="icon is-small">
+                <i class="fas fa-sign-in-alt"></i>
+              </span>  
+              <%= link_to "Log In", new_user_session_path %>
+            </div>
           </div>
         </div>
       </div>
