@@ -1,54 +1,58 @@
 <nav class="navbar is-warning">
   <div class="navbar-brand">
     <%= link_to root_path, class: "navbar-item" do %>
-    <h1 class="title is-4", style="font-family: cursive;">📘ManaBook</h1>
+    <h1 class="title is-4" style="font-family: cursive;">📘ManaBook</h1>
     <% end %>
-    <div class="navbar-burger burger", data-target="navbarBurger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="navbar-burger" data-target="navbarMenu" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
     </div>
   </div>
+  
 
   <% if user_signed_in? %>
-  <div id="navbarBurger" class="navbar-menu">
-    <div class="navbar-item">
-      <%= link_to "Products", listings_path, class: "navbar-item button is-warning is-light" %>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="field is-grouped">
-          <p class="control">
-            <%= link_to "My page", user_path(current_user), class: " button is-warning is-light" %>
-          </p>
-          <p class="control">
-            <%= link_to "Post", new_listing_path, class: "navbar-item button is-warning is-light" %>
-          </p>
-          <p class="control">
-            <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "navbar-item button is-warning is-light" %>
-          </p>
+    <div id="navbarMenu" class="navbar-menu">
+      <div  class="navbar-start">
+        <div class="navbar-item">
+          <%= link_to "Products", listings_path, class: "button is-warning is-light" %>
+        </div>
+        <div class="navbar-item">
+          <%= link_to "My page", user_path(current_user), class: "button is-warning is-light" %>
+        </div>  
+        <div class="navbar-item">
+          <%= link_to "Post", new_listing_path, class: "button is-warning is-light" %>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <span class="icon is-small">
+            <i class="far fa-user"></i>
+            </span>
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "button is-ghost" %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<% else %>
-  <div id="navbarBurger" class="navbar-menu">
-    <div class="navbar-item">
-      <%= link_to "Products", listings_path, class: "navbar-item button is-warning is-light" %>
-    </div>
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="field is-grouped">
-          <p class="control">
-            <%= link_to "Log In", new_user_session_path, class: "button is-warning is-light" %>
-          </p>
-          <p class="control">
-            <%= link_to "Sign Up", new_user_registration_path, class: "button is-warning is-light" %>
-          </p>
+  <% else %>
+    <div id="navbarMenu" class="navbar-menu">
+      <div  class="navbar-start">
+        <div class="navbar-item">
+          <%= link_to "Products", listings_path, class: "button is-warning is-light" %>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <span class="icon is-small">
+            <i class="far fa-user"></i>
+            </span>
+            <%= link_to "Log In", new_user_session_path, class: "button is-ghost" %>|
+            <%= link_to "Sign Up", new_user_registration_path, class: "button is-ghost" %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
 </nav>
