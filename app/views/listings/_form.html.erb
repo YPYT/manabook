@@ -11,40 +11,85 @@
     </div>
   <% end %>
 
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-6">
 
-  <div class="field">
-    <%= form.label :image  %>
-    <%= form.file_field :list_images, multiple: true, accept: "image/png,image/jpg,image/jpeg" %>
-  </div>
+          <%# image %>
+          <div class="field">
+            <div class="file is-normal">
+              <label class="file-label">
+              <input class="file-input" type="file">
+                <span class="file-cta">
+                  <span class="file-icon icon is-large">
+                    <i class="fas fa-camera"></i>
+                  </span>
+                  <span >
+                    <%= form.file_field :list_images, multiple: true, accept: "image/png,image/jpg,image/jpeg", class: "file-label" %>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+          <%# title %>
+          <div class="field">
+            <%= form.label :title, class: "label" %>
+            <div class="control">
+              <%= form.text_field :title, class: "input", placeholder: "Title" %>
+            </div>
+          </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+          <%# description %>
+          <div class="field">
+            <%= form.label :description, class: "label" %>
+              <div class="control">
+            <%= form.text_area :description, class: "textarea", placeholder: "Description" %>
+          </div>
 
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.select :category_id, @categories.map {|c| [c.name, c.id]} %>
-  </div>
+          <%# category %>
+          <div class="field">
+            <%= form.label :category_id, class: "label"%>
+              <div class="control">
+                <div class="select">
+                  <%= form.select :category_id, @categories.map {|c| [c.name, c.id]}%>
+                </div>
+              </div>
+          </div>
 
-  <div class="field">
-    <% @conditions.each do |option| %>
-      <%= form.label :condition, format_condition(option) %>
-      <%= form.radio_button :condition, option %>
-    <% end %>
-  </div>
+          <%# condition %>
+          <label class="label">
+            Condition
+          </label>
+          <div class="field">
+            <div class="control"> 
+              <% @conditions.each do |option| %>
+                <%= form.radio_button :condition, option%>
+                <%= form.label :condition, format_condition(option) %>     
+              <% end %>
+            </div>
+          </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, min: 5%>
-  </div>
+          <%# price %>
+          <div class="field">
+            <%= form.label :price, class: "label" %>
+            <%= form.number_field :price, min: 5, class: "input is-rounded", placeholder: "Minimum $ 5" %>
+          </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+          <%# submit/cancel %>
+          <div class="field is-grouped">
+            <p class="control">
+              <%= form.submit "Create", class: "button is-primary" %>
+            </p>
+            <p class="control">
+              <%= link_to 'Cancel', listings_path, class: "button is-light"  %>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 <% end %>
+
