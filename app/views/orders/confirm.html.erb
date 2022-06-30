@@ -1,29 +1,53 @@
-<h2>Order confirmation</h2>
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Order confirmation
+      </h1>
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <%# image %>
+      <div class="column">
+        <figure class="image is-1by1">
+          <% @listing.list_images.each do |image|  %>
+            <%= image_tag image, alt: @listing.title %>
+          <% end %>
+        </figure>
+      </div>
 
-<% @listing.list_images.each do |image|  %>
-  <%= image_tag image.variant(resize_to_limit: [150,150]), alt: @listing.title %>
-<% end %>
-
-<table >
-  <tr>
-    <th>Title</th><td><%= @listing.title %></td>
-  </tr>
-  <tr>
-    <th>Price</th><td>$ <%= @listing.price %></td>
-  </tr>
-  <tr>
-    <th>Category</th><td><%= @listing.category.name %></td>
-  </tr>
-  <tr>
-    <th>Item Condition</th><td><%= format_condition(@listing.condition) %></td>
-  </tr>
-  <tr>
-    <th>Seller</th><td><%= @listing.user.username %></td>
-  </tr>
-</table>
-<br><br>
-
-<%= button_to "Purchase Now", listing_order_success_path %>
-<br>
-<%= link_to "Cancel", listing_path(@listing) %>
+      <div class="column">
+        <div class="table-container">
+          <table class="table is-bordered is-striped is-narrow" >
+            <tr>
+              <th>Title</th><td><%= @listing.title %></td>
+            </tr>
+            <tr>
+              <th>Price</th><td>$ <%= @listing.price %></td>
+            </tr>
+            <tr>
+              <th>Category</th><td><%= @listing.category.name %></td>
+            </tr>
+            <tr>
+              <th>Item Condition</th><td><%= format_condition(@listing.condition) %></td>
+            </tr>
+            <tr>
+              <th>Seller</th><td><%= @listing.user.username %></td>
+            </tr>
+          </table>
+        </div>
+        <div class="field is-grouped">
+        <p class="control">
+          <%= button_to "Purchase Now", listing_order_success_path, class: "button is-primary" %>
+        </p>
+        <p class="control">
+          <%= link_to "Cancel", listing_path(@listing), class: "button is-light" %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
