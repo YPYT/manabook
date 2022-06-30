@@ -7,6 +7,7 @@ class Listing < ApplicationRecord
   validates :title,  length: { in: 1..50 }
   validates :description,  length: { in: 1..1000 }
   validates :condition, presence: true
+  validates :price, presence: true
 
 
   enum condition: {
