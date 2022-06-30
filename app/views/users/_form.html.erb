@@ -15,9 +15,20 @@
       <div class="columns is-centered">
         <div class="column is-6">
 
+          <%# image %>
           <div class="field">
             <%= form.label :image, class: "label"  %>
-            <%= form.file_field :profile_image, accept: "image/png,image/jpg,image/jpeg", class: "input" %>
+            <div class="file is-normal">
+              <input class="file-input" type="file">
+                <span class="file-cta">
+                  <span class="file-icon icon is-large">
+                    <i class="fas fa-camera"></i>
+                  </span>
+                  <span >
+                    <%= form.file_field :profile_image, accept: "image/png,image/jpg,image/jpeg", class: "file-label" %>
+                  </span>
+                </span>
+            </div>
           </div>
 
           <div class="field">
