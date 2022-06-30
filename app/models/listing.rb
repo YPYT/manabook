@@ -4,16 +4,10 @@ class Listing < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many_attached :list_images, dependent: :destroy
   
-  with_options presence: true do
-    validates :title
-    validates :price
-    validates :description
-    validates :condition
-  end
+  validates :title,  length: { in: 1..50 }
+  validates :description,  length: { in: 1..1000 }
+  validates :condition, presence: true
 
-
-
-  
 
   enum condition: {
     new_or_unused: 1,
@@ -21,5 +15,18 @@ class Listing < ApplicationRecord
     a_little_damage: 3,
     much_damage: 4
   }
+
+  
+  FILE_NUMBER_LIMIT = 3
+
+  validate :validate_number_of_files
+
+  private
+
+  def validate_number_of_files
+    return if list_images.length <= FILE_NUMBER_LIMIT
+    errors.add(:list_images, "are minimum #{FILE_NUMBER_LIMIT}.")
+  end
+
 
 end

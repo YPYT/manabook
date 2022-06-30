@@ -53,7 +53,9 @@
             <%= form.label :category_id, class: "label"%>
               <div class="control">
                 <div class="select">
+                  <% if @categories %>
                   <%= form.select :category_id, @categories.map {|c| [c.name, c.id]}%>
+                  <% end %>
                 </div>
               </div>
           </div>
@@ -64,10 +66,12 @@
           </label>
           <div class="field">
             <div class="control"> 
+            <% if @conditions %>
               <% @conditions.each do |option| %>
                 <%= form.radio_button :condition, option%>
                 <%= form.label :condition, format_condition(option) %>     
               <% end %>
+            <% end %>
             </div>
           </div>
 
