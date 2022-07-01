@@ -11,7 +11,7 @@ class ListingsController < ApplicationController
 
   # GET /listings/1 or /listings/1.json
   def show 
-   
+    @sold_orders = current_user.sold_orders
   end
 
   # GET /listings/new

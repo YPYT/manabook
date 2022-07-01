@@ -1,12 +1,17 @@
 class OrdersController < ApplicationController
-  before_action :set_listing
+  before_action :set_listing, only: [ :success, :confirm, :listing_order]
   before_action :authenticate_user!  
 
-  def show
+  def success
   end
 
   def confirm
   end
+
+  def bought
+    @bought_items = current_user.bought_orders
+  end
+
 
   def listing_order
     @order = Order.create(

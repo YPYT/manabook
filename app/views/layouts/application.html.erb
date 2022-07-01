@@ -28,6 +28,11 @@
     <% end %>
 
     <%= render 'shared/nav_top' %>
+
+
+    <% if Rails.env.development? %>
+      <% console %>
+    <% end %>
     <%= yield %>
 
 
