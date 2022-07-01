@@ -11,10 +11,9 @@ Rails.application.routes.draw do
   post 'orders/bought', to: "orders#bought"
   get 'orders/sold', to: "orders#sold"
   post 'orders/sold', to: "orders#sold"
+  
   resources :listings do
     resources :comments, only: [:create, :destroy]
-  end
-  resources :listings do
     post 'order/success', to: "orders#listing_order"
     get 'order/success', to: 'orders#success'
     post 'order/confirm', to: 'orders#confirm'

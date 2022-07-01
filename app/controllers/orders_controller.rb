@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_listing, only: [ :success, :confirm, :listing_order]
+  before_action :set_listing, only: [ :success, :confirm, :listing_order, :bought, :sold]
   before_action :authenticate_user!  
 
   def success

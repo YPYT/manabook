@@ -21,7 +21,7 @@
           </div>
           <div class="card-content">
             <p class= "subtitle">
-              $AU <%= @listing.price %>
+              <%= number_to_currency(@listing.price) %>
             </p>
             <div class="content">
               <% if @listing.sold %>

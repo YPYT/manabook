@@ -20,6 +20,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @listing = Listing.find(params[:id])
+    @listing.destroy
+
+    respond_to do |format|
+      format.html { redirect_to listings_url, notice: "Listing was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit(:username, :profile_image, :email, :profile)
