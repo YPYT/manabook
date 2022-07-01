@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
   end
 
   def sold
-    @sold_orders = current_user.sold_orders
+    @sold_items = current_user.sold_orders
   end
 
   def listing_order

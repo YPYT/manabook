@@ -22,7 +22,7 @@
         </thead>
         <tbody>
           <% @bought_items.each do |item| %>
-          <tr>
+            <tr>
               <td class= "image is-96x96 is-1by1">
                 <% if item.listing.list_images.attached? %>
                   <%= link_to (image_tag item.listing.list_images[0]), listing_url(item) %>
@@ -33,8 +33,8 @@
               <td><%= item.listing.title %></td>
               <td><%= number_to_currency(item.listing.price) %></td>
               <td><%= link_to item.seller.username, user_path(item) %></td>
-            <% end %>
-          </tr>
+            </tr>
+          <% end %>
         </tbody>
       </table>
     </div>
