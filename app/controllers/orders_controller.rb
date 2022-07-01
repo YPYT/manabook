@@ -12,6 +12,9 @@ class OrdersController < ApplicationController
     @bought_items = current_user.bought_orders
   end
 
+  def sold
+    @sold_orders = current_user.sold_orders
+  end
 
   def listing_order
     @order = Order.create(

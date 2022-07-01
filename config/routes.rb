@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   devise_for :users
   resources :users
-  get 'orders/bought', to: "orders#bought"
+  get 'users/:id/orders/bought', to: "orders#bought"
+  post 'users/:id/orders/bought', to: "orders#bought"
   resources :listings do
     resources :comments, only: [:create, :destroy]
   end
