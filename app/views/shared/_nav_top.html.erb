@@ -22,8 +22,13 @@
           <%= link_to "Post", new_listing_path, class: "button is-ghost" %>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
-          <%= link_to "My page", user_path(current_user), class: "navbar-link" %>
+          <a class="navbar-link">
+            My page
+          </a>
             <div class="navbar-dropdown">
+              <div class="navbar-item">
+                <%= link_to "Profile", user_path(current_user) %>
+              </div>
               <div class="navbar-item">
                 <%= link_to "Bought Items", orders_bought_path %>
               </div>
