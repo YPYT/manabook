@@ -16,14 +16,22 @@
     <div id="navbarMenu" class="navbar-menu is-active">
       <div  class="navbar-start">
         <div class="navbar-item">
-          <%= link_to "Products", listings_path, class: "button is-warning is-light" %>
+          <%= link_to "Products", listings_path, class: "button is-ghost" %>
         </div>
         <div class="navbar-item">
-          <%= link_to "My page", user_path(current_user), class: "button is-warning is-light" %>
-        </div>  
-        <div class="navbar-item">
-          <%= link_to "Post", new_listing_path, class: "button is-warning is-light" %>
+          <%= link_to "Post", new_listing_path, class: "button is-ghost" %>
         </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <%= link_to "My page", user_path(current_user), class: "navbar-link" %>
+            <div class="navbar-dropdown">
+              <div class="navbar-item">
+                <%= link_to "Bought Items", orders_bought_path %>
+              </div>
+              <div class="navbar-item">
+                <%= link_to "Sold Items", orders_sold_path %>
+              </div>
+            </div>
+        </div> 
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
