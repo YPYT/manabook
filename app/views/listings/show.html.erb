@@ -54,7 +54,7 @@
                 <p><%= @listing.category.name %></p>
               </div>
               <% if current_user && current_user.id == @listing.user.id %>
-                <%= link_to 'Edit', edit_listing_path(@listing), class: "tag is-small" %> |
+                <%= link_to 'Edit', edit_listing_path(@listing), class: "tag is-small" %>
                 <%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "tag is-small" %> 
               <% end %>
             </div>
