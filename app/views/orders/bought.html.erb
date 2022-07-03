@@ -1,42 +1,39 @@
-<section class="hero is-success">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
+<section class="hero">
+  <div class="container has-text-centered">
+    <div class="hero-body">
+      <h1 class="title" style= "font-family: Arial Black;">
         Items you have bought
       </h1>
     </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="table-container">
-      <table class="table is-bordered is-striped is-narrow" >
-        <thead>
-          <tr>
-            <th></th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Seller</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @bought_items.each do |item| %>
+    <div class="column">
+      <div class="table-container">
+        <table class="table is-bordered is-striped is-narrow is-fullwidth" >
+          <thead class="title is-6">
             <tr>
-              <td class= "image is-96x96 is-1by1">
-                <% if item.listing.list_images.attached? %>
-                  <%= link_to (image_tag item.listing.list_images[0]), listing_url(item) %>
-                <% else %>
-                  <%= link_to (image_tag "no-image.png"), listing_url(item) %>
-                <% end %>
-              </td>
-              <td><%= item.listing.title %></td>
-              <td><%= number_to_currency(item.listing.price) %></td>
-              <td><%= link_to item.seller.username, user_path(item) %></td>
+              <th></th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Seller</th>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            <% @bought_items.each do |item| %>
+              <tr>
+                <td class= "image is-128x128 is-1by1">
+                  <% if item.listing.list_images.attached? %>
+                    <%= link_to (image_tag item.listing.list_images[0]), listing_url(item) %>
+                  <% else %>
+                    <%= link_to (image_tag "no-image.png"), listing_url(item) %>
+                  <% end %>
+                </td>
+                <td class="subtitle is-6"><%= item.listing.title %></td>
+                <td class="subtitle is-6"><%= number_to_currency(item.listing.price) %></td>
+                <td class="subtitle is-6"><%= link_to item.seller.username, user_path(item) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>

@@ -1,7 +1,7 @@
-<section class="hero is-success">
+<section class="hero">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
+      <h1 class="title" style= "font-family: Arial Black;">
         Order confirmation
       </h1>
     </div>
@@ -9,15 +9,19 @@
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="columns is-centered">
+  
+    <div class="columns is-vcentered">
       <%# image %>
       <div class="column">
-        <figure class="image is-1by1">
+        <% if @listing.list_images.attached? %>
           <% @listing.list_images.each do |image|  %>
+          <figure class="image is-1by1">
             <%= image_tag image, alt: @listing.title %>
+          </figure>
           <% end %>
-        </figure>
+        <% else %>
+          <%= image_tag "no-image.png", alt: @listing.title %>
+        <% end %>
       </div>
 
       <div class="column">
@@ -42,12 +46,12 @@
         </div>
         <div class="field is-grouped">
         <p class="control">
-          <%= button_to "Purchase Now", listing_order_success_path, class: "button is-primary" %>
+          <%= button_to "Purchase", listing_order_success_path, class: "button is-info" %>
         </p>
         <p class="control">
           <%= link_to "Cancel", listing_path(@listing), class: "button is-light" %>
         </p>
       </div>
     </div>
-  </div>
+
 </section>
