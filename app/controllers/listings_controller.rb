@@ -23,6 +23,8 @@ class ListingsController < ApplicationController
   def edit
     if @listing.user != current_user
       redirect_to listings_path, alert: "Unauthorized access."
+    elsif @listing.sold
+      redirect_to listings_path, alert: "Can't edit because it's sold"
     end
   end
 

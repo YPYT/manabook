@@ -55,11 +55,13 @@
             </div>
             <div class="card-content">
               <%= number_to_currency(listing.price) %>
-              <% if current_user && current_user.id == listing.user.id %>
+              <% if current_user && current_user.id == listing.user.id && !@listing.sold %>
                 <div>
                   <%= link_to 'Edit', edit_listing_path(listing), class: "tag is-small" %> 
                   <%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "tag is-small" %> 
                 </div>
+              <% elsif current_user && current_user.id == listing.user.id %>
+                <%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "tag is-small" %>
               <% end %>
             </div>
           </div>
