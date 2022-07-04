@@ -13,9 +13,9 @@ class Listing < ApplicationRecord
 
   enum condition: {
     new_or_unused: 1,
-    not_much_damege: 2,
-    a_little_damage: 3,
-    much_damage: 4
+    minimal_wear: 2,
+    moderate_damage: 3,
+    damaged: 4
   }
 
   
