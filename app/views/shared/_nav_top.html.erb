@@ -6,10 +6,10 @@
         <%= link_to root_path, class: "navbar-item" do %>
         <h1 class="title is-4 has-text-white" style="font-family: cursive;">📗 ManaBook</h1>
         <% end %>
-        <div class="navbar-burger" data-target="navbarMenu" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+        <div class="navbar-burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
   
@@ -18,10 +18,10 @@
     <div id="navbarMenu" class="navbar-menu is-active">
       <div  class="navbar-end">
         <span class="navbar-item">
-          <%= link_to "Products", listings_path, class: "button is-white is-outlined" %>
+          <%= link_to "Products", listings_path, class: "button is-dark" %>
         </span>
         <span class="navbar-item">
-          <%= link_to "Post", new_listing_path, class: "button is-white is-outlined" %>
+          <%= link_to "Post", new_listing_path, class: "button is-dark" %>
         </span>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
@@ -44,7 +44,7 @@
             <span class="icon is-small">
             <i class="far fa-user"></i>
             </span>
-            <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "button is-white is-outlined" %>
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "button is-dark" %>
           </div>
         </div>
       </div>
@@ -52,26 +52,22 @@
   <% else %>
     <div id="navbarMenu" class="navbar-menu is-active">
       <div  class="navbar-end">
-        <span class="navbar-item">
-          <%= link_to "Products", listings_path, class: "button is-white is-outlined" %>
-        </span>
-      </div>
-      <span class="navbar-item">
-        <div class="buttons">
-          <div class = "button is-white is-outlined">
-            <span class="icon is-small">
-              <i class="far fa-user"></i>
-            </span>
-            <%= link_to "Sign Up", new_user_registration_path %>
-          </div>
-          <div class = "button is-white is-outlined"> 
-            <span class="icon is-small">
-              <i class="fas fa-sign-in-alt"></i>
-            </span>  
-            <%= link_to "Log In", new_user_session_path %>
+        <div class="navbar-item">
+          <%= link_to "Products", listings_path, class: "button is-dark" %>
+        </div>
+        <div class="navbar-item">
+          <div class="buttons">
+              <span class="icon is-small">
+                <i class="far fa-user"></i>
+              </span>
+              <%= link_to "Sign Up", new_user_registration_path, class: "button is-dark" %>
+              <span class="icon is-small">
+                <i class="fas fa-sign-in-alt"></i>
+              </span>  
+              <%= link_to "Log In", new_user_session_path, class: "button is-dark" %>
           </div>
         </div>
-      </span>
+      </div>
     </div>
   <% end %>
 </nav>
