@@ -4,11 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable
 
-  has_many :listings, dependent: :destroy
-  has_many :comments, dependent: :destroy
+  has_many :listings
+  has_many :comments
   
-  has_many :sold_orders, foreign_key: "seller_id", class_name: "Order", dependent: :destroy
-  has_many :bought_orders, foreign_key: "buyer_id", class_name: "Order", dependent: :destroy
+  has_many :sold_orders, foreign_key: "seller_id", class_name: "Order"
+  has_many :bought_orders, foreign_key: "buyer_id", class_name: "Order"
 
   has_one_attached :profile_image, dependent: :destroy
 
