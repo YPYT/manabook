@@ -2,9 +2,10 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="columns is-centered">
-          <div class="column is-4">
-            <figure class="image is-128x128"  style="margin-left: auto; margin-right: auto;">
+        <div class="media">
+          <div class="media-left">
+
+            <figure class="image is-128x128">
               <% if @user.profile_image.attached? %>
                 <%= image_tag @user.profile_image, alt: @user.username, class: "profile_image is-rounded" %>
               <% else %>
@@ -12,28 +13,24 @@
               <% end %>
             </figure>
           </div>
-          <div class="column is-8">
-            <table class="table is-fullwidth">
-              <tr>
-                <td class="is-size-4">
-                  <strong><%= @user.username %></strong>
-                </td>
-                <td>
-                  <% if current_user && current_user.id == @user.id %>
-                    <%= link_to 'Edit Profile', edit_user_path(@user), class: "button is-primary" %> 
-                  <% end %>
-                </td>
-              </tr>
-            </table>
-            <table class="table is-fullwidth">
-              <tr>
-                <td>
-                  <%= @user.profile %>
-                </td>
-              </tr>
-            </table>
+        
+          <div class="media-content">
+            <div class="content">
+              <strong class="title is-4"><%= @user.username %></strong>
+                <% if current_user && current_user.id == @user.id %>
+                <div class="level-right">
+                  <%= link_to 'Edit Profile', edit_user_path(@user), class: "tag is-light is-rounded" %> 
+                </div>
+                <% end %>
+            </div>
           </div>
         </div>
+        <div class="content">            
+          <%= @user.profile %>
+        </div>
+
+
+
       </div>
     </div>
   </div>
