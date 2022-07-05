@@ -10,8 +10,8 @@ This application is dedicated to unused textbooks, so people do not have to worr
 The application will benefit everyone, including the environment.
 
 ## Links
-- GitHub: 
-- Website:
+- [GitHub:](https://github.com/YPYT/manabook.git)
+- [Website:](https://manabook-official.herokuapp.com/)
 
 
 ## Application Discription
@@ -61,6 +61,7 @@ This application aims to save resources, protect the environment, and save money
 
 
 ## Wireframes
+[Wireframe link](https://whimsical.com/wireframe-Y2jjriauAbDShVJL4N4kwX)
 
 ## ERD
 
