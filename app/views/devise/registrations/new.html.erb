@@ -44,7 +44,7 @@
             <%= f.label :password, class: "label" %>
             <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %><br />
+            <% end %>
             <p class="control has-icons-left">
               <%= f.password_field :password, autocomplete: "new-password", placeholder: "password", class: "input" %>
               <span class="icon is-small is-left">
