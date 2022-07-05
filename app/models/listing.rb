@@ -2,7 +2,7 @@ class Listing < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_many :comments, dependent: :destroy
-  has_many :orders
+  has_many :orders, dependent: :destroy
   has_many_attached :list_images, dependent: :destroy
   
   validates :title,  length: { in: 1..50 }
