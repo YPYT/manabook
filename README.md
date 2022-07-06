@@ -44,7 +44,7 @@ This application aims to save resources, protect the environment, and save money
 - When you click the "buy this item" button, it shows order confirmation page with listing image and products infomation.
 - In the success page, there is link to the product page that you bought.
 - There are bought items page and sold items page in the my page link and users are able to see what they have sold and bought.
-- Bought items page and sold items page has link to the item page 
+- Bought items page and sold items page has link to the item page and seller/buyer profile page.
 
 ### Sitemap
 
