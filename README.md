@@ -1,13 +1,17 @@
 # Manabook 
 
-## The problem to try to solve by building this particular marketplace app.
-In my home country (Japan), there is a day for resource garbage, and the day is fixed for discarding no longer needed resources (newspapers, cardboard boxes, textbooks, etc.). Whenever I go to the garbage disposal site on the day of the garbage collection, I always see piles of textbooks that are still in usable condition.
-Also, at the beginning of a new school year, students are required to purchase certain textbooks, which cost approximately $300 to $500 in total. These costs are not low, and there are many people who cannot afford them. Such people attempt to find specific textbooks online or at used bookstores, but sites such as Amazon and E-bay offer a wide variety of products other than textbooks, and when there is no used bookstore nearby, it takes time to find a specific textbook.
+## The problem to try to solve by building this particular marketplace app. Why should this problem be solved?
+1. Some people are wasting resources by throwing away their learning materials, such as textbooks that could still be used.
+- This problem is not good for the environment and we need to save resources and energy. By reusing textbooks that are no longer in use, we can save the resources and energy used to produce new textbooks. When textbooks are discarded as recyclable waste, they are recycled as used paper, and so on, but this does not save the resources used to make new textbooks. 
 
-## Why should this problem be solved?
-By reusing textbooks that are no longer in use, we can save resources and energy to produce textbooks. When textbooks are discarded as recyclable waste, they are recycled as used paper, etc., but this does not save the resources needed to make new textbooks. It also does not save the cost of education for those who want to buy textbooks.
-This application is dedicated to unused textbooks, so people do not have to worry about where to buy and sell their textbooks. 
-The application will benefit everyone, including the environment.
+2. The cost of learning materials is high, especially at university. 
+- At the beginning of a new school year, students must purchase specific textbooks, which cost approximately $300 to $500 in total. These costs are not low, and not everyone can afford to get brand new textbooks. 
+This marketplace application helps them offer cheaper prices. 
+
+3. When you are trying to find a specific textbook on a website such as Amazon or e-bay, they have too many categories not involved in educational materials, so it takes time to find a specific book that you want.
+- Usually, students must buy textbooks before their school courses begin. Therefore, they cannot waste time looking for textbooks.
+
+This application is just for educational materials and will benefit everyone, including the environment.
 
 ## Links
 - [GitHub:](https://github.com/YPYT/manabook.git)
@@ -25,8 +29,26 @@ This application aims to save resources, protect the environment, and save money
 - Adults who want to learn again
 
 ### Functionality / features
+- Responsive design that allows for all the devices such as phone, tablet, laptop, and so on.
+- Users are able to log in and sign up with their email address and password.
+- The password must contain both single-byte alphanumeric characters.
+- Only authenticate users are able to edit and update their profile.
+- The listing products have image, title, condition, cotegory, price and link to seller profile.
+- Users are able to upload up to 3 listing images.
+- Users are able to comments unless the product is not sold out.
+- Sellers can edit their own listing unless the item is not sold out.
+- Sellers can delete their own listing.
+- The listing has update time.
+- Every comment has the time when they commented.
+- The author of listing is able to delete comments.
+- When you click the "buy this item" button, it shows order confirmation page with listing image and products infomation.
+- In the success page, there is link to the product page that you bought.
+- There are bought items page and sold items page in the my page link and users are able to see what they have sold and bought.
+
 
 ### Sitemap
+
+
 ### Screenshots
 
 ### Tech stack
@@ -38,26 +60,23 @@ This application aims to save resources, protect the environment, and save money
 - As a user I want to see what are the textbooks listed.
 - As a user I want to be able to sign up so I can sell or buy my textbooks.
 - As a user I want to be able to log in with my new registered account.
-- As a user I want to be able to change my password.
-- As a user I want to be able to reissue password if I've forgot my password.
 - As a user I want to be able to edit my profile.
 - As a user I want to be able to see if the products on the listing still on sale so I can buy only the products on sale.
 - As a user I want to know the price of the products so I can compare which one is cheaper.
-- As a user I want to be able to search a textbook that I want so I can save my time to find the textbook.
+- As a user I want to know the category so I can save my time to find textbooks.
+- As a user I want to know the condition of products so I can imagin how clean they are.
 
-- As a user(buyer) I want to be able to see sellers review on their profile so I can feel secure to buy their products. 
 - As a user(buyer) I want to buy the textbooks that I want.
-- As a user(buyer) I want to be able to buy by a card so it's easy to pay.
-- As a user(buyer) I want to be able to write a review to let the sellers know how good/bad their services or products.
+- As a user(buyer) I want to know if the textbook that I want is still on sale.
+- As a user(buyer) I want to be able to see my bought items list.
 - As a user(buyer) I want to be able to comment about the product to the seller so I can get more details of the product.
 - As a user(buyer) I want to be able to get the confirmation before payment.
 
 - As a user(seller) I want to be able to post my textbooks that I don't use anymore so I don't have to throw away them.
-- As a user(seller) I want to be able to see the review from the buyers so I know how good/bad my services or products.
 - As a user(seller) I want to be able to edit and delete my posts so I can manage my products.
 - As a user(seller) I want to be able to reply to the comment from buyer so I can sell more easily and give them better services.
-- As a user(seller) I want to be able to post the image of the textbooks so I can explain how the condition of my products.
-
+- As a user(seller) I want to be able to post the images of the textbook so I can explain how the condition of my products.
+- As a user(seller) I want to be able to see my sold items list.
 
 
 ## Wireframes
