@@ -28,7 +28,7 @@
                 </td>
                 <td class="subtitle is-6"><%= item.listing.title %></td>
                 <td class="subtitle is-6"><%= number_to_currency(item.listing.price) %></td>
-                <td class="subtitle is-6"><%= link_to item.seller.username, user_path(item) %></td>
+                <td class="subtitle is-6"><%= link_to item.seller.username, user_path(item.seller) %></td>
               </tr>
             <% end %>
           </tbody>
