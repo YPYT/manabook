@@ -21,9 +21,9 @@
               <tr>
                 <td class= "image is-128x128 is-1by1">
                   <% if item.listing.list_images.attached? %>
-                    <%= link_to (image_tag item.listing.list_images[0]), listing_url(item) %>
+                    <%= link_to (image_tag item.listing.list_images[0]), listing_path(item.listing) %>
                   <% else %>
-                    <%= link_to (image_tag "no-image.png"), listing_url(item) %>
+                    <%= link_to (image_tag "no-image.png"), listing_path(item.listing) %>
                   <% end %>
                 </td>
                 <td class="subtitle is-6"><%= item.listing.title %></td>

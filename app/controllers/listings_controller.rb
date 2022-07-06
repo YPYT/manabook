@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  before_action :set_listing, only: [ :show, :edit, :update, :destroy, :place_order ]
+  before_action :set_listing, only: [ :show, :edit, :update, :destroy ]
   before_action :set_form_vars, only: [ :new, :edit, :create ]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :authorize_user, only: [:edit, :update, :destroy]

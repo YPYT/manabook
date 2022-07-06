@@ -1,19 +1,11 @@
 class OrdersController < ApplicationController
-  before_action :set_listing, only: [ :success, :confirm, :listing_order]
+  before_action :set_listing, only: [ :success, :confirm, :listing_order ]
   before_action :authenticate_user!  
 
   def success
   end
 
   def confirm
-  end
-
-  def bought
-    @bought_items = current_user.bought_orders
-  end
-
-  def sold
-    @sold_items = current_user.sold_orders
   end
 
   def listing_order
@@ -25,6 +17,14 @@ class OrdersController < ApplicationController
 
     @listing.update(sold: true)
     redirect_to listing_order_success_path
+  end
+
+  def bought
+    @bought_items = current_user.bought_orders
+  end
+
+  def sold
+    @sold_items = current_user.sold_orders
   end
 
 
