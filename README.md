@@ -108,10 +108,10 @@ A storage service provided by Amazon Web Services (AWS) that stores objects cons
 Each User has many listings, comments, and orders(sold orders and bought orders). Also, has one profile image stored in Amazon S3 through active strage. Listings, comments and images that related with users are deleted when a user account is deleted.
 
 - Listing model(details of each product information)
-Each Listing belongs to user and category. Also, it has many comments, orders and images stored in Amazon S3 through active strage. Comments, orders and images that related with listings are deleted when a listing(product) is deleted. 
+Each Listing belongs to user and category. Also, it has many comments and images which are stored in Amazon S3 through active strage, and has one order. Comments, orders and images that related with listings are deleted when a listing(product) is deleted. 
 
 - Category model(product's category information)
-Each Category has many listings. When the listings are deleted, the category related in it also will delete.
+Each Category has one listing. When the listings are deleted, the category related in it also will delete.
 
 - Comment model(details of each comment for products information)
 Each comment belongs to user and listing.
@@ -120,7 +120,14 @@ Each comment belongs to user and listing.
 Each order belongs to listing, and also buyer and seller from User model.
 
 ### Discuss the database relations to be implemented in your application
+- **One to One relationship**  
+This relation is when a column in one table is related to exactly one column in the other table.  
+In this application, a listing has 0 or one order and order has only one listing. For example, if a listing item isn't sold, it can't have any order, but if it's sold out, it can have one order. Also, order only have one listing because it can have listing only when the listing is bought. Listing have only one category and category also have only one listing. Listing have to have one category, so when listing created, category must have one listing as well.
 
+- **One to Many relations**  
+The one-to-many relationship indicates that one column in one table (the parent table) is related to many rows in the other table (the child table).  
+In this application, User has 0 or many orders, listings and comments. Users don't have to have any order, post any listing, or write any comment, but are able to have many orders, order many listings, or write many comments.  
+Listing has 0 or many comments and comment has one listing. Listing can exists without any comment or have many comments, but comment can't exist unless listing create. 
 
 ### Provide your database schema design
 
