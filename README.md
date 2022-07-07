@@ -90,10 +90,6 @@ This application aims to save resources, protect the environment, and save money
 
 ### ERD
 
-### Trello board
-
-
-
 
 ## Q&A
 ### Explain the different high-level components (abstractions) in your app
@@ -129,8 +125,8 @@ The one-to-many relationship indicates that one column in one table (the parent 
 In this application, User has 0 or many orders, listings and comments. Users don't have to have any order, post any listing, or write any comment, but are able to have many orders, order many listings, or write many comments.  
 Listing has 0 or many comments and comment has one listing. Listing can exists without any comment or have many comments, but comment can't exist unless listing create. 
 
-### Provide your database schema design
-
 
 ### Describe the way tasks are allocated and tracked in your project
-
+To manage and track the tasks, I used Trello board. All the tasks are in the `Planning` section, and move to `To Do` section before the task due will coming. And once the tasks in the `To Do` is done, the task will be moved to the `Done` section. All the tasks have due day, task's level label(small, medium, large, option), and the process of application label (ready to app, building app, and finishing app). 
+(There are optional functions in the `function/features` section for the future. )  
+[Trello link:](https://trello.com/b/RqHi8SlS/assignment-marketplace-application)
