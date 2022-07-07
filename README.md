@@ -28,34 +28,6 @@ This application aims to save resources, protect the environment, and save money
 - Parents of students
 - Adults who want to learn again
 
-### Functionality / features
-- Responsive design that allows for all the devices such as phone, tablet, laptop, and so on.
-- Users are able to log in and sign up with their email address and password.
-- The password must contain both single-byte alphanumeric characters.
-- Only authenticate users are able to edit and update their profile.
-- The listing products have image, title, condition, cotegory, price and link to seller profile.
-- Users are able to upload up to 3 listing images.
-- Users are able to comments unless the product is not sold out.
-- Sellers can edit their own listing unless the item is not sold out.
-- Sellers can delete their own listing.
-- The listing has update time.
-- Every comment has the time when they commented.
-- The author of listing is able to delete comments.
-- When you click the "buy this item" button, it shows order confirmation page with listing image and products infomation.
-- In the success page, there is link to the product page that you bought.
-- There are bought items page and sold items page in the my page link and users are able to see what they have sold and bought.
-- Bought items page and sold items page has link to the item page and seller/buyer profile page.
-
-### Sitemap
-
-
-### Screenshots
-
-### Tech stack
-
-## How to install and set up this application
-
-
 ## User Stories
 - As a user I want to see what are the textbooks listed.
 - As a user I want to be able to sign up so I can sell or buy my textbooks.
@@ -79,13 +51,79 @@ This application aims to save resources, protect the environment, and save money
 - As a user(seller) I want to be able to see my sold items list.
 
 
-## Wireframes
+### Functionality / features
+- Responsive design that allows for all the devices such as phone, tablet, laptop, and so on.
+- Users are able to log in and sign up with their email address and password.
+- The password must contain both single-byte alphanumeric characters.
+- Only authenticate users are able to edit and update their profile.
+- The listing products have image, title, condition, cotegory, price and link to seller profile.
+- Users are able to upload up to 3 listing images.
+- Users are able to comments unless the product is not sold out.
+- Sellers can edit their own listing unless the item is not sold out.
+- Sellers can delete their own listing.
+- The listing has update time.
+- Every comment has the time when they commented.
+- The author of listing is able to delete comments.
+- When you click the "buy this item" button, it shows order confirmation page with listing image and products infomation.
+- In the success page, there is link to the product page that you bought.
+- There are bought items page and sold items page in the my page link and users are able to see what they have sold and bought.
+- Bought items page and sold items page has link to the item page and seller/buyer profile page.
+
+
+### Tech stack (e.g. html, css, deployment platform, etc)
+- HTML
+- CSS
+- JavaScript
+- Ruby
+- Ruby on Rails
+- Bulma
+- Heroku
+- AWS S3 Bucket
+
+
+### Wireframes
 [Wireframe link](https://whimsical.com/wireframe-Y2jjriauAbDShVJL4N4kwX)
 
-## ERD
+### Sitemap
 
-### Description
--  The database relations to be implemented
+### Screenshots
+
+### ERD
+
+### Trello board
 
 
-## the way tasks are allocated and tracked
+
+
+## Q&A
+### Explain the different high-level components (abstractions) in your app
+
+
+### Detail any third party services that your app will use
+- Amazon S3 Bucket
+A storage service provided by Amazon Web Services (AWS) that stores objects consisting of data and its metadata in a bucket you create. In this application, it is used to store uploaded image data. The closest region (Sydney) from Melbourne was selected to reduce latency and cost.
+
+### Describe your projects models in terms of the relationships (active record associations) they have with each other
+- User model(user information)
+Each User has many listings, comments, and orders(sold orders and bought orders). Also, has one profile image stored in Amazon S3 through active strage. Listings, comments and images that related with users are deleted when a user account is deleted.
+
+- Listing model(details of each product information)
+Each Listing belongs to user and category. Also, it has many comments, orders and images stored in Amazon S3 through active strage. Comments, orders and images that related with listings are deleted when a listing(product) is deleted. 
+
+- Category model(product's category information)
+Each Category has many listings. When the listings are deleted, the category related in it also will delete.
+
+- Comment model(details of each comment for products information)
+Each comment belongs to user and listing.
+
+- Order model(stores each listing information that is ordered and users(seller and buyer) information)
+Each order belongs to listing, and also buyer and seller from User model.
+
+### Discuss the database relations to be implemented in your application
+
+
+### Provide your database schema design
+
+
+### Describe the way tasks are allocated and tracked in your project
+
