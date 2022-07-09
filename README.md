@@ -80,31 +80,31 @@ This application aims to save resources, protect the environment, and save money
 [Wireframe link](https://whimsical.com/wireframe-Y2jjriauAbDShVJL4N4kwX)
 
 ## Sitemap
-![Sitemap](./docs/sitemap.jpg)
+![Sitemap](./app/assets/images/sitemap.jpg)
 
 ## Screenshots
 Home Page  
-![Home](./docs/screen%20shots%20of%20manabook/Home.png)  
+![Home](./app/assets/images/screen%20shots%20of%20manabook/Home.png)  
 Sign Up page  
-![SignUp](./docs/screen%20shots%20of%20manabook/Sign%20up%20.png)  
+![SignUp](./app/assets/images/screen%20shots%20of%20manabook/Sign%20up%20.png)  
 Log In page  
-![LogIn](./docs/screen%20shots%20of%20manabook/Log%20In.png)  
+![LogIn](./app/assets/images/screen%20shots%20of%20manabook/Log%20In.png)  
 Products index page  
-![Products](./docs/screen%20shots%20of%20manabook/Products.png)  
+![Products](./app/assets/images/screen%20shots%20of%20manabook/Products.png)  
 Products Show page  
-![Show](./docs/screen%20shots%20of%20manabook/Show%20page.png)  
+![Show](./app/assets/images/screen%20shots%20of%20manabook/Show%20page.png)  
 Post page   
-![Post](./docs/screen%20shots%20of%20manabook/Post.png)  
+![Post](./app/assets/images/screen%20shots%20of%20manabook/Post.png)  
 Profile page  
-![profile](./docs/screen%20shots%20of%20manabook/profile%20page.png)  
+![profile](./app/assets/images/screen%20shots%20of%20manabook/profile%20page.png)  
 Bought items page  
-![BoughtItem](./docs/screen%20shots%20of%20manabook/bought%20items%20page.png)  
+![BoughtItem](./app/assets/images/screen%20shots%20of%20manabook/bought%20items%20page.png)  
 Sold items page  
-![SoldItem](./docs/screen%20shots%20of%20manabook/sold%20items%20page.png)  
+![SoldItem](./app/assets/images/screen%20shots%20of%20manabook/sold%20items%20page.png)  
 Order confirmation page  
-![OrderConfirmation](./docs/screen%20shots%20of%20manabook/order%20confirmation%20page.png)  
+![OrderConfirmation](./app/assets/images/screen%20shots%20of%20manabook/order%20confirmation%20page.png)  
 Order success page  
-![OrderSuccess](./docs/screen%20shots%20of%20manabook/order%20success%20page.png)  
+![OrderSuccess](./app/assets/images/screen%20shots%20of%20manabook/order%20success%20page.png)  
 
 ## The different high-level components (abstractions)  
 This app uses the MVC architecture pattern, which influences the overall structure of the app. The C (controller) communicates with both the V (view) and M (model) and is the core of the app.   
@@ -129,7 +129,7 @@ It provides the environment for the database and server to run the app. Heroku t
 
 
 ## ERD
-![ERD](./docs/ERD.jpg)
+![ERD](./app/assets/images/ERD.jpg)
 
 ### Models in terms of the relationships (active record associations)   
 - **User model(user information)**  
@@ -304,39 +304,39 @@ To manage and track the tasks, I used Trello board. All the tasks are in the `Pl
 (There are optional functions in the `function/features` section for the future. )   
   
 **Day 1**  
-![day1](./docs/screenshot%20trello/day1_21_06.png)  
+![day1](./app/assets/images/screenshot%20trello/day1_21_06.png)  
 **Day 2**  
-![day2](./docs/screenshot%20trello/day2_22_06.png)  
+![day2](./app/assets/images/screenshot%20trello/day2_22_06.png)  
 **Day 3**  
-![day3](./docs/screenshot%20trello/day3_23_06.png)  
+![day3](./app/assets/images/screenshot%20trello/day3_23_06.png)  
 **Day 4**  
-![day4](./docs/screenshot%20trello/day4_24_06.png)  
-![day4](./docs/screenshot%20trello/day4_24_06_detail.png)  
+![day4](./app/assets/images/screenshot%20trello/day4_24_06.png)  
+![day4](./app/assets/images/screenshot%20trello/day4_24_06_detail.png)  
 **Day 5**   
-![day5](./docs/screenshot%20trello/day5_25_06.png)  
+![day5](./app/assets/images/screenshot%20trello/day5_25_06.png)  
 **Day 6**   
-![day6](./docs/screenshot%20trello/day6_26_06.png)  
+![day6](./app/assets/images/screenshot%20trello/day6_26_06.png)  
 **Day 7**   
-![day7](./docs/screenshot%20trello/day7_27_06.png)  
-![day7](./docs/screenshot%20trello/day7_27_06_detail.png)  
+![day7](./app/assets/images/screenshot%20trello/day7_27_06.png)  
+![day7](./app/assets/images/screenshot%20trello/day7_27_06_detail.png)  
 **Day 8,9**   
-![day8](./docs/screenshot%20trello/day8-9_28.29_06(1).png)  
-![day8](./docs/screenshot%20trello/day8-9_28.29_06.png)  
+![day8](./app/assets/images/screenshot%20trello/day8-9_28.29_06(1).png)  
+![day8](./app/assets/images/screenshot%20trello/day8-9_28.29_06.png)  
 **Day 10**   
-![day10](./docs/screenshot%20trello/day10_30_06.png)  
+![day10](./app/assets/images/screenshot%20trello/day10_30_06.png)  
 **Day 11**   
-![day11](./docs/screenshot%20trello/day11_01_07.png)  
-![day11](./docs/screenshot%20trello/day11_01_07(1).png)  
+![day11](./app/assets/images/screenshot%20trello/day11_01_07.png)  
+![day11](./app/assets/images/screenshot%20trello/day11_01_07(1).png)  
 **Day 12**   
-![day12](./docs/screenshot%20trello/day12_02_07.png)  
+![day12](./app/assets/images/screenshot%20trello/day12_02_07.png)  
 **Day 13,14**   
-![day13,14](./docs/screenshot%20trello/day13%2C14_03.04_07.png)  
+![day13,14](./app/assets/images/screenshot%20trello/day13%2C14_03.04_07.png)  
 **Day 15,16**   
-![day15,16](./docs/screenshot%20trello/day15%2C16_05.06_07.png)  
+![day15,16](./app/assets/images/screenshot%20trello/day15%2C16_05.06_07.png)  
 **Day 17,18**   
-![day17,18](./docs/screenshot%20trello/day17%2C18_07.08_07.png)  
+![day17,18](./app/assets/images/screenshot%20trello/day17%2C18_07.08_07.png)  
 **Day 19**   
-![day19](./docs/screenshot%20trello/day19_09_07.png)  
+![day19](./app/assets/images/screenshot%20trello/day19_09_07.png)  
 
 
 
