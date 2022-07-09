@@ -304,40 +304,85 @@ To manage and track the tasks, I used Trello board. All the tasks are in the `Pl
 (There are optional functions in the `function/features` section for the future. )   
   
 **Day 1**  
-![day1](./app/assets/images/screenshot%20trello/day1_21_06.png)  
+- Wireframe  
+- ERD  
+- About the problem to solve and reasons  
+![day1](./app/assets/images/screenshot%20trello/day1_21_06.png)
+  
 **Day 2**  
-![day2](./app/assets/images/screenshot%20trello/day2_22_06.png)  
+- Set up devise  
+- User stories   
+![day2](./app/assets/images/screenshot%20trello/day2_22_06.png)
+
 **Day 3**  
-![day3](./app/assets/images/screenshot%20trello/day3_23_06.png)  
+- Sitemap  
+- Devise  
+- Create all the models and controllers
+![day3](./app/assets/images/screenshot%20trello/day3_23_06.png)
+
 **Day 4**  
+- Set up Active Strage and AWS S3 bucket Image  
+- Set up Image and category model  
 ![day4](./app/assets/images/screenshot%20trello/day4_24_06.png)  
-![day4](./app/assets/images/screenshot%20trello/day4_24_06_detail.png)  
+![day4](./app/assets/images/screenshot%20trello/day4_24_06_detail.png)
+
 **Day 5**   
-![day5](./app/assets/images/screenshot%20trello/day5_25_06.png)  
+- create user profile pages, listing form, listing show page.  
+![day5](./app/assets/images/screenshot%20trello/day5_25_06.png)
+
 **Day 6**   
-![day6](./app/assets/images/screenshot%20trello/day6_26_06.png)  
+- Implement comment function
+- create comment page
+![day6](./app/assets/images/screenshot%20trello/day6_26_06.png)
+
 **Day 7**   
+- Implement order function  
 ![day7](./app/assets/images/screenshot%20trello/day7_27_06.png)  
-![day7](./app/assets/images/screenshot%20trello/day7_27_06_detail.png)  
+![day7](./app/assets/images/screenshot%20trello/day7_27_06_detail.png)
+
 **Day 8,9**   
+- Layout/design for user profile page, user edit page, Listing show page and index page. (bulma)
+- deploying to heroku
 ![day8](./app/assets/images/screenshot%20trello/day8-9_28.29_06(1).png)  
-![day8](./app/assets/images/screenshot%20trello/day8-9_28.29_06.png)  
+![day8](./app/assets/images/screenshot%20trello/day8-9_28.29_06.png)
+
 **Day 10**   
-![day10](./app/assets/images/screenshot%20trello/day10_30_06.png)  
+- deploying to heroku  
+- Layout/design for order pages  
+![day10](./app/assets/images/screenshot%20trello/day10_30_06.png)
+
 **Day 11**   
+- validation  
+- implement sold items page and bought items page  
 ![day11](./app/assets/images/screenshot%20trello/day11_01_07.png)  
-![day11](./app/assets/images/screenshot%20trello/day11_01_07(1).png)  
+![day11](./app/assets/images/screenshot%20trello/day11_01_07(1).png)
+
 **Day 12**   
-![day12](./app/assets/images/screenshot%20trello/day12_02_07.png)  
+- Listing show page image layout
+- Home top page design/layout  
+![day12](./app/assets/images/screenshot%20trello/day12_02_07.png)
+
 **Day 13,14**   
-![day13,14](./app/assets/images/screenshot%20trello/day13%2C14_03.04_07.png)  
+- Prepare for presentation  
+- Made a slide  
+![day13,14](./app/assets/images/screenshot%20trello/day13%2C14_03.04_07.png)
+
 **Day 15,16**   
-![day15,16](./app/assets/images/screenshot%20trello/day15%2C16_05.06_07.png)  
+- Testinf if every functions works well  
+- README documentation  
+![day15,16](./app/assets/images/screenshot%20trello/day15%2C16_05.06_07.png)
+
 **Day 17,18**   
-![day17,18](./app/assets/images/screenshot%20trello/day17%2C18_07.08_07.png)  
+- Fixed ERD  
+- README documentation  
+![day17,18](./app/assets/images/screenshot%20trello/day17%2C18_07.08_07.png)
+
 **Day 19**   
-![day19](./app/assets/images/screenshot%20trello/day19_09_07.png)  
-
-
+- Add code comments to the queries  
+![day19](./app/assets/images/screenshot%20trello/day19_09_07.png)
+  
 
 [Trello link:](https://trello.com/b/RqHi8SlS/assignment-marketplace-application)
+
+## Reference 
+[reference](./app/assets/images/reference.pdf)
