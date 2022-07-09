@@ -331,8 +331,8 @@ To manage and track the tasks, I used Trello board. All the tasks are in the `Pl
 ![day5](./app/assets/images/screenshot%20trello/day5_25_06.png)
 
 **Day 6**   
-- Implement comment function
-- create comment page
+- Implement comment function  
+- create comment page  
 ![day6](./app/assets/images/screenshot%20trello/day6_26_06.png)
 
 **Day 7**   
@@ -341,8 +341,8 @@ To manage and track the tasks, I used Trello board. All the tasks are in the `Pl
 ![day7](./app/assets/images/screenshot%20trello/day7_27_06_detail.png)
 
 **Day 8,9**   
-- Layout/design for user profile page, user edit page, Listing show page and index page. (bulma)
-- deploying to heroku
+- Layout/design for user profile page, user edit page, Listing show page and index page. (bulma)  
+- deploying to heroku  
 ![day8](./app/assets/images/screenshot%20trello/day8-9_28.29_06(1).png)  
 ![day8](./app/assets/images/screenshot%20trello/day8-9_28.29_06.png)
 
@@ -358,7 +358,7 @@ To manage and track the tasks, I used Trello board. All the tasks are in the `Pl
 ![day11](./app/assets/images/screenshot%20trello/day11_01_07(1).png)
 
 **Day 12**   
-- Listing show page image layout
+- Listing show page image layout  
 - Home top page design/layout  
 ![day12](./app/assets/images/screenshot%20trello/day12_02_07.png)
 
