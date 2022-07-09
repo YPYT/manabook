@@ -317,7 +317,7 @@ To manage and track the tasks, I used Trello board. All the tasks are in the `Pl
 **Day 3**  
 - Sitemap  
 - Devise  
-- Create all the models and controllers
+- Create all the models and controllers  
 ![day3](./app/assets/images/screenshot%20trello/day3_23_06.png)
 
 **Day 4**  
