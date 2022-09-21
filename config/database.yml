@@ -81,6 +81,8 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: manabook_production
   username: manabook
   password: <%= ENV['MANABOOK_DATABASE_PASSWORD'] %>
+
