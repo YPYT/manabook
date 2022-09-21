@@ -15,7 +15,9 @@
  */
  @import "bulma";
 
-
+main {
+   background: linear-gradient(rgb(141, 164, 217), white);
+}
 .notification:not(:last-child){
     margin-bottom: 0;
 }
@@ -36,3 +38,21 @@
 a:hover {
    background-color: lightgrey !important;
  }
+
+
+.seller{
+   background: linear-gradient(rgb(253, 253, 112), white);
+}
+
+.buyer {
+   background: linear-gradient(rgb(112, 190, 253), white);
+}
+
+.environment {
+   background: linear-gradient(rgb(75, 220, 135), white);
+}
+
+.title {
+   margin-bottom: 30px;
+   font-family: serif;
+}

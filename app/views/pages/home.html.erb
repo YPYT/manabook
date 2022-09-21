@@ -1,76 +1,73 @@
-<section class="hero">
-  <figure class="image">
-    <%= image_tag "image-top.jpg", alt: "home page" %>
-  </figure>
-</section>
-<section class="section">
-  <div class="container has-text-centered">
-    <h2 class="title is-2">About Manabook</h2>
-    <h3 class="subtitle is-5">"Manabu" + "Book"</h3>
-    <div class="container">
-      <p class="subtitle is-6">
-        <strong>"Mana"</strong> is from <strong>"Manabu"</strong>, which means <strong>"learn"</strong> in Japanese.
-        <br
-        >Here is a site for selling and buying <strong>"books to learn"</strong>
-      </p>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container has-text-centered">
-    <div class="column is-6 is-offset-3">
-      <h2 class="title is-3">Background</h2>
-      <h3 class="subtitle is-5">What is this for?</h3>
+<main>
+  <section class="hero">
+    <figure class="image">
+      <%= image_tag "image-top.jpg", alt: "home page" %>
+    </figure>
+  </section>
+  <section class="section has-text-centered">
+      <h2 class="title is-2">About Manabook</h2>
+      <h3 class="subtitle is-5">"Manabu" + "Book"</h3>
       <div class="container">
         <p class="subtitle is-6">
-          By reusing textbooks that are no longer in use, we can save resources and energy to produce textbooks. 
-          When textbooks are discarded as recyclable waste, they are recycled as used paper, etc., but this does not save the resources needed to make new textbooks.
-          It also does not save the cost of education for those who want to buy textbooks. This application is dedicated to textbooks that is no longer used, so people do not have to worry about where to buy and sell their textbooks.
-          The application will benefit everyone, including the environment.
+          <strong>"Mana"</strong> is from <strong>"Manabu"</strong>, which means <strong>"learn"</strong> in Japanese.
+          <br
+          >Here is a site for selling and buying <strong>"books to learn"</strong>
         </p>
       </div>
+  </section>
+  <section class="section has-text-centered">
+      <div class="column is-6 is-offset-3">
+        <h2 class="title is-3">Background</h2>
+        <h3 class="subtitle is-5">What is this for?</h3>
+        <div class="container">
+          <p class="subtitle is-6">
+            By reusing textbooks that are no longer in use, we can save resources and energy to produce textbooks. 
+            When textbooks are discarded as recyclable waste, they are recycled as used paper, etc., but this does not save the resources needed to make new textbooks.
+            It also does not save the cost of education for those who want to buy textbooks. This application is dedicated to textbooks that is no longer used, so people do not have to worry about where to buy and sell their textbooks.
+            The application will benefit everyone, including the environment.
+          </p>
+        </div>
+      </div>
+  </section>
+  <section class="section">
+    <div class="is-heading has-text-centered">
+      <h2 class="title is-3">benefits</h2>
     </div>
-  </div>
-</section>
-<section class="section">
-  <div class="section is-heading has-text-centered">
-    <h2 class="title is-3">benefits</h2>
-  </div>
-  <div class="container has-text-centered">
-    <div class="columns">
-      <div class="column">
-        <div class="box">
-          <div class="content">
-            <h4 class="title is-5">For sellers</h4>
-              You can sell textbooks and reference books that you no longer need.
+    <div class="container has-text-centered">
+      <div class="columns">
+        <div class="column">
+          <div class="box seller">
+            <div class="content">
+              <h4 class="title is-5">For sellers</h4>
+                You can sell textbooks and reference books that you no longer need.
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box buyer">
+            <div class="content">
+              <h4 class="title is-5">For buyers</h4>
+                You can buy the textbooks you need and the reference books you want at a discount.
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box environment">
+            <div class="content">
+              <h4 class="title is-5">For environment</h4>
+                Reduce the resources and energy needed to produce new textbooks and reference books.
+            </div>
           </div>
         </div>
       </div>
-      <div class="column">
-        <div class="box">
-          <div class="content">
-            <h4 class="title is-5">For buyers</h4>
-              You can buy the textbooks you need and the reference books you want at a discount.
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="box">
-          <div class="content">
-            <h4 class="title is-5">For environment</h4>
-              Reduce the resources and energy needed to produce new textbooks and reference books.
-          </div>
-        </div>
+    </div>
+    <div class="section is-heading has-text-centered">
+      <div class="column is-6 is-offset-3">
+        <%= link_to "Let's Start Now!", new_user_registration_path, class: "button is-rounded title is-4" %>
       </div>
     </div>
-  </div>
-  <div class="section is-heading has-text-centered">
-    <div class="column is-6 is-offset-3">
-      <%= link_to "Let's Start Now!", new_user_registration_path, class: "button is-white title is-4" %>
-    </div>
-  </div>
-</section>
-
+  </section>
+</main>
 
 
 
