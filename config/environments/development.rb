@@ -77,5 +77,5 @@ Rails.application.configure do
   # add devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
- 
+  config.hosts << "manabook-production.up.railway.app"
 end
