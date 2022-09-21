@@ -1,7 +1,6 @@
 # Manabook 
 ## Links
-- [GitHub](https://github.com/YPYT/manabook.git)
-- [ManaBook Website](https://manabook-official.herokuapp.com/)
+- [ManaBook Website](https://manabook-production.up.railway.app/)
 
 ## Application Discription
 ### The problem to try to solve by building this particular marketplace app. Why should this problem be solved?  
